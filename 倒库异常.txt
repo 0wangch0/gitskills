@@ -1,0 +1,11 @@
+﻿已执行的 SQL 语句：CREATE TABLE `t_mtwm_comment_record` (
+  `shop_name` varchar(100) NOT NULL COMMENT '商铺名字',
+  `shop_addr` varchar(500) NOT NULL COMMENT '商铺地址',
+  `comment_type` int(11) NOT NULL COMMENT '好1中2差3',
+  `incr_num` int(11) DEFAULT '0' COMMENT '小于增量id的数量',
+  `incr_comment_id` int(11) DEFAULT '0' COMMENT '增量爬取最新id',
+  `full_finish` int(11) DEFAULT '0' COMMENT '全量是否完成',
+  `sys_create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `sys_update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`shop_name`,`shop_addr`,`comment_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4错误号：1071错误信息：Specified key was too long; max key length is 767 bytes
